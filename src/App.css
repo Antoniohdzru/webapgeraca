@@ -1,0 +1,732 @@
+/* src/App.css */
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@400;600;700&family=Roboto:wght@400;500&display=swap');
+
+:root {
+  --dark-blue: #0A192F;
+  --light-blue-gradient: #132F56;
+  --accent-blue: #3B82F6;
+  --text-light: #F1F5F9;   /* Mantenemos el blanco suave para títulos. */
+  --text-muted: #E2E8F0;   /* <-- Un gris super claro, casi blanco, para máxima legibilidad. */
+  --card-bg: rgba(17, 24, 39, 0.8);
+  --border-color: rgba(59, 130, 246, 0.2);
+
+  --font-heading: 'Teko', sans-serif;
+  --font-body: 'Roboto', sans-serif;
+}
+body {
+  background-color: #000000;
+  background-image: linear-gradient(160deg, var(--dark-blue) 0%, #000000 74%);
+  background-attachment: fixed;
+  color: var(--text-light);
+  font-family: var(--font-body);
+  margin: 0;
+}
+
+.app-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+main {
+  flex-grow: 1;
+}
+
+/* --- NAVBAR --- */
+.navbar-custom {
+  background-color: rgba(10, 25, 47, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border-color);
+  padding: 0.5rem 1rem !important;
+}
+.navbar-brand img {
+  transition: transform 0.3s ease;
+}
+.navbar-brand:hover img {
+  transform: rotate(-10deg) scale(1.1);
+}
+.nav-link-custom {
+  color: var(--text-muted);
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  margin: 0 0.5rem;
+  padding: 0.25rem 0.5rem !important;
+  transition: color 0.3s ease;
+  position: relative;
+}
+.nav-link-custom:hover, .nav-link-custom.active {
+  color: var(--accent-blue);
+}
+.nav-link-custom::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: var(--accent-blue);
+  transition: width 0.3s ease;
+}
+.nav-link-custom:hover::after, .nav-link-custom.active::after {
+  width: 100%;
+}
+
+/* --- CAROUSEL --- */
+.hero-carousel .carousel-item {
+  height: 75vh; min-height: 450px;
+}
+.hero-carousel .carousel-item img {
+  object-fit: cover;
+  width: 100%; height: 100%;
+  filter: brightness(0.5);
+}
+.hero-carousel .carousel-caption {
+  bottom: 20%; left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  width: 90%;
+}
+.hero-carousel h3 {
+  font-family: var(--font-heading);
+  font-size: 4.5rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+}
+.hero-carousel .btn-hero {
+  background-color: var(--accent-blue);
+  border: none;
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  padding: 0.5rem 2rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.hero-carousel .btn-hero:hover {
+  background-color: var(--light-blue-gradient);
+  transform: translateY(-3px);
+}
+
+/* --- SECCIONES Y TARJETAS --- */
+.content-section {
+  padding: 4rem 1rem;
+}
+.section-title {
+  font-family: var(--font-heading);
+  font-size: 3.5rem;
+  font-weight: 600;
+  color: var(--text-light);
+  text-align: center;
+  margin-bottom: 3rem;
+  letter-spacing: 2px;
+}
+.news-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(5px);
+  height: 100%;
+}
+.news-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(59, 130, 246, 0.2);
+}
+.news-card .card-img-top {
+  height: 220px;
+  object-fit: cover;
+}
+.news-card .card-body {
+  padding: 1.5rem;
+}
+.news-card .card-title {
+  font-family: var(--font-heading);
+  font-size: 1.75rem;
+  color: var(--accent-blue);
+  line-height: 1.2;
+}
+
+/* --- SECCIÓN PATROCINADORES --- */
+.sponsors-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+}
+.sponsor-logo {
+  max-width: 140px;
+  filter: grayscale(100%) brightness(1.5) contrast(0.8);
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+.sponsor-logo:hover {
+  filter: none;
+  transform: scale(1.1);
+}
+
+/* --- PÁGINA DE CUOTAS --- */
+.cuotas-page-wrapper .cuota-image-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+.cuotas-page-wrapper .cuota-image-center img {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 50%;
+  border: 3px solid var(--accent-blue);
+  box-shadow: 0 0 25px rgba(59, 130, 246, 0.4);
+}
+.cuota-card { /* Reutiliza el estilo de news-card */
+  background: var(--card-bg); border: 1px solid var(--border-color);
+  border-radius: 8px; overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(5px); height: 100%; text-align: center;
+}
+.cuota-card:hover {
+  transform: translateY(-10px); box-shadow: 0 10px 30px rgba(59, 130, 246, 0.2);
+}
+.cuota-card .card-header {
+  background: var(--accent-blue); color: var(--dark-blue);
+  font-family: var(--font-heading); font-size: 1.8rem;
+  border-bottom: none;
+}
+.cuota-card .price {
+  font-family: var(--font-heading); font-size: 3rem; font-weight: 700;
+  color: var(--accent-blue);
+}
+.cuota-card .price span {
+  font-size: 1rem; color: var(--text-muted); font-family: var(--font-body);
+}
+
+/* --- FOOTER --- */
+.footer-custom {
+  background-color: var(--dark-blue);
+  padding: 2rem 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  border-top: 1px solid var(--border-color);
+}
+.footer-custom .social-icons-footer a {
+  color: var(--text-muted);
+  font-size: 1.5rem;
+  margin: 0 0.75rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+.footer-custom .social-icons-footer a:hover {
+  color: var(--accent-blue);
+  transform: scale(1.2);
+}
+
+/* --- MEDIA QUERIES --- */
+@media (max-width: 768px) {
+  .hero-carousel h3 { font-size: 3rem; }
+  .section-title { font-size: 2.5rem; }
+}
+
+/* src/App.css (AÑADIR ESTO AL FINAL) */
+
+/* --- Estilos para Iconos Sociales en la Navbar --- */
+.social-icon-link {
+  color: var(--text-muted);
+  font-size: 1.2rem; /* Tamaño de los iconos */
+  padding: 0.5rem 0.6rem !important;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icon-link:hover {
+  color: #fff; /* Se ponen blancos al pasar el ratón */
+  transform: scale(1.2); /* Se agrandan un poco */
+}
+
+/* Línea vertical para separar los enlaces de los iconos en pantallas grandes */
+.navbar-divider {
+  height: 25px;
+  width: 1px;
+  background-color: var(--border-color);
+  opacity: 0.5;
+}
+
+/* --- Estilos para el Menú Desplegable (Dropdown) --- */
+.dropdown-menu {
+  background-color: var(--dark-blue);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  margin-top: 0.5rem !important;
+}
+.dropdown-item {
+  color: var(--text-muted);
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+.dropdown-item:hover, .dropdown-item:focus {
+  color: var(--text-light);
+  background-color: rgba(59, 130, 246, 0.1);
+}
+.dropdown-divider {
+  border-top: 1px solid var(--border-color);
+  opacity: 0.5;
+}
+/* Cambiar color del texto "Club" en la navbar cuando el dropdown está activo */
+.nav-item.dropdown.show .nav-link {
+  color: var(--accent-blue);
+}
+
+/* src/App.css (AÑADIR ESTO AL FINAL DEL ARCHIVO) */
+
+/* --- Estilos Adicionales para Página de Cuotas --- */
+
+/* Estilo para el header de la tarjeta de Matrícula */
+.pricing-card-header-special {
+  background: linear-gradient(135deg, #FFD700, #FBBF24); /* Gradiente dorado */
+  color: var(--dark-blue);
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  text-align: center;
+  border-bottom: none;
+}
+
+/* Estilo para la tarjeta de Información de Pagos */
+.info-card {
+  border-style: dashed;
+  border-width: 2px;
+}
+
+.info-card .card-header {
+  background-color: transparent;
+  border-bottom: 1px solid var(--border-color);
+  color: var(--accent-blue);
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.info-card-item {
+  background-color: transparent !important;
+  color: var(--text-light) !important;
+  font-size: 1.3rem;
+  font-weight: 600;
+  font-family: var(--font-heading);
+  letter-spacing: 1px;
+  border: none !important;
+  padding: 0.5rem 0 !important;
+}
+
+/* Estilos para la sección de Contacto */
+.contact-section {
+  border-top: 1px solid var(--border-color);
+}
+
+.contact-card {
+  background-color: transparent;
+  border: none;
+}
+.contact-card h5 {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  color: var(--text-light);
+}
+.contact-link {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--accent-blue);
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+.contact-link:hover {
+  background-color: var(--accent-blue);
+  color: #fff;
+  border-color: var(--accent-blue);
+}
+
+/* Heredamos los estilos de .cuota-card de la versión anterior, no hace falta redefinirlos */
+/* Si no los tenías, aquí están los básicos: */
+.cuota-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(5px);
+  height: 100%;
+}
+.cuota-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(59, 130, 246, 0.2);
+}
+.cuota-card .price {
+  font-family: var(--font-heading);
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: var(--accent-blue);
+}
+.cuota-card .price-period {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--text-muted);
+}
+
+/* src/App.css (VERIFICA Y AÑADE ESTOS ESTILOS SI FALTAN) */
+
+/* --- ESTILOS PARA PÁGINAS INTERNAS (COMO CUOTAS) --- */
+.page-hero-section {
+  padding: 6rem 1rem; /* Aumenta el padding para dar más espacio */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  flex-direction: column; /* Para centrar verticalmente */
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  min-height: 40vh; /* Altura mínima */
+}
+.page-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6); /* Overlay negro para más contraste */
+  z-index: 1;
+}
+.page-hero-title, .page-hero-subtitle {
+  position: relative;
+  z-index: 2;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.9);
+}
+.page-hero-title {
+  font-family: var(--font-heading);
+  font-size: 3.5rem; /* Título más grande */
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.page-hero-subtitle {
+  font-size: 1.3rem;
+  font-weight: 300;
+  max-width: 600px;
+  margin: 0.5rem auto 0;
+  opacity: 0.9;
+}
+
+
+/* --- ESTILOS PARA LAS TARJETAS DE PRECIOS/CUOTAS --- */
+/* Estilos para el icono dentro del header de la tarjeta */
+.cuota-card .card-header svg {
+  font-size: 1.5rem; /* Tamaño del icono */
+  vertical-align: middle; 
+}
+
+
+
+/* --- Estilos para los iconos de imagen en las tarjetas --- */
+.card-header-icon {
+  width: 40px;          /* Ancho fijo */
+  height: 40px;         /* Alto fijo */
+  border-radius: 50%;   /* ¡Esto lo hace circular! */
+  object-fit: cover;    /* Evita que la imagen se deforme */
+  border: 2px solid var(--accent-blue); /* Borde azul para que destaque */
+  background-color: #fff; /* Fondo por si el PNG tiene transparencias */
+}
+
+/* src/App.css (AÑADIR ESTO AL FINAL) */
+
+/* --- Estilos para la Nueva Página "Nuestro Club" --- */
+
+/* Para alternar imagen-texto en secciones */
+.info-section-reverse {
+  flex-direction: row-reverse;
+}
+
+@media (max-width: 991.98px) {
+  .info-section-reverse {
+    flex-direction: column-reverse; /* En móvil, la imagen siempre va arriba */
+  }
+}
+
+/* Etiquetas para la sección de Valores */
+.value-tag {
+  background-color: var(--dark-blue-primary);
+  color: var(--text-light);
+  padding: 0.3rem 0.8rem;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: 1px solid var(--border-color);
+}
+
+/* Tarjetas de perfil para la sección de Personas */
+.profile-card {
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+.profile-card:hover {
+  transform: scale(1.05);
+}
+.profile-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--accent-blue);
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+}
+.profile-name {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  color: #fff;
+  margin-bottom: 0.25rem;
+}
+.profile-title {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+/* Estilos adicionales para subtítulos de sección */
+.section-subtitle {
+  font-family: var(--font-heading);
+  color: var(--accent-blue);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* src/App.css (AÑADIR ESTO AL FINAL) */
+
+/* --- Estilos para la Nueva Sección de Objetivos --- */
+.objective-subtitle {
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--accent-blue);
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--border-color);
+  margin-bottom: 1rem;
+}
+
+.objective-list {
+  list-style: none; /* Quitamos los puntos por defecto */
+  padding-left: 1.2rem;
+}
+
+.objective-list li {
+  color: var(--text-muted);
+  padding-bottom: 0.5rem;
+  position: relative;
+}
+
+/* Creamos nuestro propio "punto" de lista con un estilo más moderno */
+.objective-list li::before {
+  content: '■'; /* Puedes usar '', '▶', '✓' o lo que prefieras */
+  color: var(--accent-blue);
+  font-weight: bold;
+  position: absolute;
+  left: -1.2rem;
+}
+
+/* src/App.css (AÑADIR ESTO AL FINAL) */
+
+/* --- Estilos para la Nueva Página de Galería --- */
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+.gallery-item img {
+  transition: transform 0.4s ease;
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+.gallery-item:hover img {
+  transform: scale(1.1);
+}
+.gallery-item-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(to top, rgba(10, 25, 47, 0.9) 0%, transparent 100%);
+  color: #fff;
+  padding: 2rem 1rem 1rem;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+.gallery-item:hover .gallery-item-overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* --- Estilos para la Nueva Página de Noticias --- */
+.featured-news-main .featured-news-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  min-height: 400px;
+}
+.featured-news-main .featured-news-title {
+  font-size: 2.2rem;
+}
+.card-button-outline {
+  color: var(--accent-blue);
+  border-color: var(--accent-blue);
+}
+.card-button-outline:hover {
+  color: #fff;
+  background-color: var(--accent-blue);
+  border-color: var(--accent-blue);
+}
+
+/* src/App.css (AÑADIR ESTO AL FINAL) */
+
+/* --- Estilos para Actividades Destacadas en HomePage --- */
+.featured-activity-card {
+  border: 2px solid var(--border-color);
+  overflow: hidden;
+  min-height: 350px;
+}
+.featured-activity-card .featured-activity-img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.4s ease;
+}
+.featured-activity-card:hover .featured-activity-img {
+  transform: scale(1.05);
+}
+.featured-activity-card .card-img-overlay {
+  background: linear-gradient(to top, rgba(10, 25, 47, 0.95) 20%, transparent 100%);
+  justify-content: flex-end; /* Alinea contenido abajo */
+}
+.featured-activity-card .featured-activity-title {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  color: #fff;
+}
+/* src/App.css (AÑADIR ESTO AL FINAL) */
+
+/* --- Estilos para el botón CTA con icono --- */
+.cta-link {
+  display: inline-flex; /* Para alinear texto e icono */
+  align-items: center;
+  text-decoration: none;
+  background-color: var(--accent-blue);
+  color: var(--dark-blue);
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+  padding: 0.5rem 0.5rem 0.5rem 1.5rem; /* Más padding a la izquierda */
+  border-radius: 50px; /* Bordes redondeados */
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.2);
+}
+
+.cta-link:hover {
+  background-color: var(--text-light);
+  color: var(--dark-blue);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.3);
+}
+
+.cta-link .cta-text {
+  transition: color 0.3s ease;
+}
+
+.cta-link .cta-icon {
+  height: 40px;
+  width: 40px;
+  margin-left: 1rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+/* src/App.css (AÑADIR ESTO AL FINAL) */
+
+/* --- Estilos para el Carrusel Rediseñado --- */
+.hero-carousel .carousel-item {
+  height: 80vh; /* Un poco más alto */
+  min-height: 500px;
+  background-color: #000; /* Fondo negro para el letterboxing */
+}
+.hero-carousel .carousel-item-background {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-carousel .carousel-item img {
+  object-fit: contain; /* <-- Muestra la imagen completa */
+  width: 100%;
+  height: 100%;
+  filter: none; /* Quitamos el brillo para que se vea bien */
+}
+.hero-carousel .carousel-caption {
+  background: linear-gradient(to top, rgba(10, 25, 47, 0.8) 0%, transparent 100%);
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2rem;
+  width: 100%;
+  transform: none;
+}
+.carousel-subtitle {
+  font-size: 1.2rem;
+  font-weight: 400;
+  max-width: 800px;
+  margin: 1rem auto;
+}
+
+/* --- Estilos para la Nueva Página "Equipos Cantera" --- */
+.team-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  border: none;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+.team-card-img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+.team-card:hover .team-card-img {
+  transform: scale(1.05);
+}
+.team-card-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(to top, rgba(10, 25, 47, 0.95) 20%, transparent 100%);
+  color: #fff;
+  padding: 1.5rem;
+  text-align: center;
+}
+.team-card-title {
+  font-family: var(--font-heading);
+  font-size: 1.75rem;
+  color: #fff;
+  margin: 0;
+}
+.team-card-category {
+  font-size: 0.9rem;
+  color: var(--accent-blue);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}

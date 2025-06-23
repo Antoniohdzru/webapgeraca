@@ -1,0 +1,7 @@
+/* src/index.css */
+/* Este archivo debe estar prácticamente vacío para no interferir con App.css */
+:root {
+  font-family: 'Roboto', 'Segoe UI', 'Arial', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
