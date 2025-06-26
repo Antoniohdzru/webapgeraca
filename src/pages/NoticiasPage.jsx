@@ -33,7 +33,7 @@ function NoticiasPage() {
 
                 {/* --- BOTÓN CORREGIDO --- */}
                 <Button 
-                  href={featuredNews.externalLink} // Usamos href con el enlace externo
+                  href={todasLasNoticias.externalLink} // Usamos href con el enlace externo
                   target="_blank"                 // Abre en una nueva pestaña
                   rel="noopener noreferrer"       // Medida de seguridad
                   variant="primary" 
