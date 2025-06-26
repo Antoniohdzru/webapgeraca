@@ -3,10 +3,10 @@ import React from 'react';
 import { Container, Row, Col, ListGroup } from 'react-bootstrap';
 
 // Imágenes que usaremos en esta página
-const ligaHeroImg = 'img/BANNER_WEB/LFChalenngeBanner.jpg'; 
-const competicionImg = 'img/BANNER_WEB/competicion.png';
-const palacioImg = 'img/BANNER_WEB/palacio.png';
-const equipoImg = 'img/BANNER_WEB/equipo.png'; 
+const ligaHeroImg = 'public/img/BANNER_WEB/LFChalenngeBanner.jpg'; 
+const competicionImg = 'public/img/BANNER_WEB/competicion.png';
+const palacioImg = 'public/img/BANNER_WEB/palacio.png';
+const equipoImg = 'public/img/BANNER_WEB/equipo.png'; 
 
 // Datos que se mantienen
 const jugadorasGranada = [

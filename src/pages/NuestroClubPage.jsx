@@ -4,11 +4,11 @@ import { Container, Row, Col, Card } from 'react-bootstrap';
 
 // Datos para la sección de "Personas"
 const personasData = [
-  { name: 'Luis Felipe', title: 'Presidente', img: 'img/people/people1.png' },
-  { name: 'Mariki Rodríguez', title: 'Directora deportiva', img: 'img/people/people2.png' },
-  { name: 'Julio Molina', title: 'Responsable cantera', img: 'img/people/people3.png' },
-  { name: 'Ismael Puyana', title: 'Responsable Academia Mini', img: 'img/people/people4.png' },
-  { name: 'Eva Castillo', title: 'Marketing y Comunicación', img: 'img/people/people5.png' },
+  { name: 'Luis Felipe', title: 'Presidente', img: 'public/img/people/people1.png' },
+  { name: 'Mariki Rodríguez', title: 'Directora deportiva', img: 'public/img/people/people2.png' },
+  { name: 'Julio Molina', title: 'Responsable cantera', img: 'public/img/people/people3.png' },
+  { name: 'Ismael Puyana', title: 'Responsable Academia Mini', img: 'public/img/people/people4.png' },
+  { name: 'Eva Castillo', title: 'Marketing y Comunicación', img: 'public/img/people/people5.png' },
 ];
 
 // Lista de valores del club
@@ -20,7 +20,7 @@ const valoresList = [
 function NuestroClubPage() {
   return (
     <>
-      <div className="page-hero-section" style={{ backgroundImage: `url('img/BANNER_WEB/equipocompleto.png')` }}>
+      <div className="page-hero-section" style={{ backgroundImage: `url('public/img/BANNER_WEB/equipocompleto.png')` }}>
         <div className="page-hero-overlay"></div>
         <Container>
           <h1 className="page-hero-title">CD TEAR Ramón y Cajal</h1>
@@ -48,7 +48,7 @@ function NuestroClubPage() {
         <Container className="content-section">
           <Row className="align-items-center g-5 info-section-reverse">
             <Col lg={6}>
-              <img src="img/BANNER_WEB/valores.png" alt="Jugadoras celebrando" className="img-fluid rounded shadow-lg" />
+              <img src="public/img/BANNER_WEB/valores.png" alt="Jugadoras celebrando" className="img-fluid rounded shadow-lg" />
             </Col>
             <Col lg={6}>
               <h2 className="section-title text-start">Valores</h2>
@@ -68,7 +68,7 @@ function NuestroClubPage() {
         <Row className="align-items-center g-5">
           {/* Columna Izquierda para la Imagen */}
           <Col lg={5}>
-            <img src="img/BANNER_WEB/imagenequipo1.jpg" alt="Equipo" className="img-fluid rounded shadow-lg" />
+            <img src="public/img/BANNER_WEB/imagenequipo1.jpg" alt="Equipo" className="img-fluid rounded shadow-lg" />
           </Col>
           <Col lg={7}>
             <div className="objective-text-block">
