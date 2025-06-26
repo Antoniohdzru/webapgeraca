@@ -1,8 +1,8 @@
-// src/pages/NoticiasPage.jsx (VERSIÓN ACTUALIZADA)
+// src/pages/NoticiasPage.jsx (CON BOTONES CORREGIDOS)
 import React from 'react';
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
-import { todasLasNoticias } from '../data/noticiasData.js'; // <-- Importamos los datos
+// Ya no necesitamos 'Link' de react-router-dom para esta página
+import { todasLasNoticias } from '../data/noticiasData.js'; 
 
 // Separamos la noticia destacada del resto
 const featuredNews = todasLasNoticias.find(news => news.featured) || todasLasNoticias[0];
@@ -30,7 +30,18 @@ function NoticiasPage() {
               <Card.Body className="p-4 p-lg-5">
                 <Card.Title className="featured-news-title">{featuredNews.title}</Card.Title>
                 <Card.Text className="my-3">{featuredNews.text}</Card.Text>
-                <Button as={Link} to={`/noticias/${featuredNews.id}`} variant="primary" className="card-button mt-auto align-self-start">Leer Noticia Completa</Button>
+
+                {/* --- BOTÓN CORREGIDO --- */}
+                <Button 
+                  href={featuredNews.externalLink} // Usamos href con el enlace externo
+                  target="_blank"                 // Abre en una nueva pestaña
+                  rel="noopener noreferrer"       // Medida de seguridad
+                  variant="primary" 
+                  className="card-button mt-auto align-self-start"
+                >
+                  Leer Noticia Completa
+                </Button>
+
               </Card.Body>
             </Col>
           </Row>
@@ -46,7 +57,18 @@ function NoticiasPage() {
                 <Card.Body className="d-flex flex-column">
                   <Card.Title>{news.title}</Card.Title>
                   <Card.Text>{news.text}</Card.Text>
-                  <Button as={Link} to={`/noticias/${news.id}`} variant="outline-primary" className="card-button-outline mt-auto align-self-start">Leer Más</Button>
+                  
+                  {/* --- BOTÓN CORREGIDO --- */}
+                  <Button 
+                    href={news.externalLink}    // Usamos href con el enlace externo
+                    target="_blank"             // Abre en una nueva pestaña
+                    rel="noopener noreferrer"   // Medida de seguridad
+                    variant="outline-primary" 
+                    className="card-button-outline mt-auto align-self-start"
+                  >
+                    Leer Más
+                  </Button>
+
                 </Card.Body>
               </Card>
             </Col>

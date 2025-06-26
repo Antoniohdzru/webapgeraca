@@ -142,7 +142,14 @@ function HomePage() {
                 <Card.Img variant="top" src={news.img} />
                 <Card.Body className="d-flex flex-column">
                   <Card.Title>{news.title}</Card.Title>
-                  <Button as={Link} to={`/noticias/${news.id}`} variant="outline-primary" className="card-button-outline mt-auto align-self-start">Leer Más</Button>
+                  <Button 
+                        href={news.externalLink} 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        variant="outline-primary" 
+                        className="card-button-outline mt-auto align-self-start">
+                        Leer Más
+                    </Button>
                 </Card.Body>
               </Card>
             </Col>
