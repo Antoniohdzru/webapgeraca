@@ -15,7 +15,7 @@ const carouselData = [
 const latestNews = todasLasNoticias.slice(0, 3);
 
 const sponsorsData = [
-  { src: 'public/img/sponsors/sponsor1.jpg', alt: 'Sponsor 1' }, { src: 'public/img/sponsors/sponsor2.jpg', alt: 'Sponsor 2' },
+  { src: '/img/sponsors/sponsor1.jpg', alt: 'Sponsor 1' }, { src: '/img/sponsors/sponsor2.jpg', alt: 'Sponsor 2' },
   { src: '/sponsors/p-3.png', alt: 'Sponsor 3' }, { src: '/sponsors/p-4.png', alt: 'Sponsor 4' },
   { src: '/sponsors/p-5.png', alt: 'Sponsor 5' }, { src: '/sponsors/p-6.png', alt: 'Sponsor 6' },
   { src: '/sponsors/p-7.png', alt: 'Sponsor 7' },
@@ -57,7 +57,7 @@ function HomePage() {
             </Link>
           </Col>
           <Col lg={5}>
-            <img src="img/BANNER_WEB/LogoRaca.png" alt="Foto de todo el club" className="img-fluid rounded shadow-lg" />
+            <img src="/img/BANNER_WEB/LogoRaca.png" alt="Foto de todo el club" className="img-fluid rounded shadow-lg" />
           </Col>
         </Row>
       </Container>
@@ -80,7 +80,7 @@ function HomePage() {
               </Link>
             </Col>
             <Col lg={5}>
-              <img src="public/img/BANNER_WEB/cantera.png" alt="Jóvenes de la cantera" className="img-fluid rounded shadow-lg" />
+              <img src="/img/BANNER_WEB/cantera.png" alt="Jóvenes de la cantera" className="img-fluid rounded shadow-lg" />
             </Col>
           </Row>
         </Container>
@@ -103,7 +103,7 @@ function HomePage() {
             </Link>
           </Col>
           <Col lg={5}>
-            <img src="public/img/BANNER_WEB/LF_Challenge.png" alt="Equipo compitiendo" className="img-fluid rounded shadow-lg" />
+            <img src="/img/BANNER_WEB/LF_Challenge.png" alt="Equipo compitiendo" className="img-fluid rounded shadow-lg" />
           </Col>
         </Row>
       </Container>
@@ -126,7 +126,7 @@ function HomePage() {
               </Link>
             </Col>
             <Col lg={5}>
-              <img src="public/img/BANNER_WEB/Untitled.jpg" alt="Torneo 3x3 Nocturno" className="img-fluid rounded shadow-lg" />
+              <img src="/img/BANNER_WEB/Untitled.jpg" alt="Torneo 3x3 Nocturno" className="img-fluid rounded shadow-lg" />
             </Col>
           </Row>
         </Container>

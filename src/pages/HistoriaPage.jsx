@@ -2,7 +2,7 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 
-const historiaHeroImg = '/carousel-1.jpg'; // Puedes usar una imagen genérica o una específica
+const historiaHeroImg = '/img/BANNER_WEB/equipocompleto.png'; // Puedes usar una imagen genérica o una específica
 
 function HistoriaPage() {
   return (

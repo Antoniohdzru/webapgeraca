@@ -5,7 +5,7 @@ import { Container, Card, Row, Col, ListGroup } from 'react-bootstrap';
 // Ya no necesitamos el botón, y los iconos son solo para el contacto
 import { FaPhoneAlt, FaUser } from 'react-icons/fa'; 
 
-const cuotasHeroImg = 'public/BANNER_WEB/2.jpg'; // Imagen de fondo para el encabezado
+const cuotasHeroImg = '/img/BANNER_WEB/equipocompleto.png'; // Imagen de fondo para el encabezado
 
 // Datos con las rutas a TUS imágenes PNG
 const cuotasData = [

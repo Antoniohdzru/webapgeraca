@@ -11,7 +11,7 @@ const otherNews = todasLasNoticias.filter(news => news.id !== featuredNews.id);
 function NoticiasPage() {
   return (
     <>
-      <div className="page-hero-section" style={{ backgroundImage: `url('/dossier/page29-press.jpg')` }}>
+      <div className="page-hero-section" style={{ backgroundImage: `url('/img/BANNER_WEB/equipocompleto.png')` }}>
         <div className="page-hero-overlay"></div>
         <Container>
           <h1 className="page-hero-title">Noticias</h1>

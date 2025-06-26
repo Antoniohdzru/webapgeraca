@@ -3,10 +3,10 @@ import React from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
 
 // --- DATOS EXTRAÍDOS DEL DOSSIER ---
-const canteraHeroImg = '/dossier/page2-team.jpg'; 
-const canteraMainImg = 'public/img/BANNER_WEB/jovenescantera.png'; 
-const academiaMiniImg = 'public/img/BANNER_WEB/academiamini.png'; 
-const escuelasImg = 'public/img/BANNER_WEB/escuelas.png'; 
+const canteraHeroImg = '/img/BANNER_WEB/equipocompleto.png'; 
+const canteraMainImg = '/img/BANNER_WEB/jovenescantera.png'; 
+const academiaMiniImg = '/img/BANNER_WEB/academiamini.png'; 
+const escuelasImg = '/img/BANNER_WEB/escuelas.png'; 
 
 function CanteraPage() {
   return (

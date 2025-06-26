@@ -17,7 +17,7 @@ const galleryImages = [
 function GaleriaPage() {
   return (
     <>
-      <div className="page-hero-section" style={{ backgroundImage: `url('/dossier/page21-palacio.jpg')` }}>
+      <div className="page-hero-section" style={{ backgroundImage: `url('/img/BANNER_WEB/equipocompleto.png')` }}>
         <div className="page-hero-overlay"></div>
         <Container>
           <h1 className="page-hero-title">Galería</h1>

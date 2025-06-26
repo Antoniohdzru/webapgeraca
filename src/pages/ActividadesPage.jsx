@@ -2,7 +2,7 @@
 import React from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
 
-const actividadesHeroImg = '/carousel-3.jpg';
+const actividadesHeroImg = '/img/BANNER_WEB/equipocompleto.png';
 
 function ActividadesPage() {
   return (
