@@ -7,7 +7,7 @@ import { todasLasNoticias } from '../data/noticiasData.js';
 
 // --- DATOS DE LA PÁGINA ---
 const carouselData = [
-  { img: 'public/img/BANNER_WEB/1.jpg', title: 'Bienvenidos al Universo RACA', link: '/club' },
+  { img: '/img/BANNER_WEB/1.jpg', title: 'Bienvenidos al Universo RACA', link: '/club' },
   { img: 'public/img/BANNER_WEB/2.jpg', title: '¿Quieres formar parte de la familia?', link: '/cuotas' },
   { img: 'public/img/BANNER_WEB/equipo.png', title: 'Galería', link: '/galeria' },
 ];
