@@ -175,7 +175,7 @@ function HomePage() {
                     </Link>
                 </Col>
                 <Col lg={5}>
-                    <img src="public/img/BANNER_WEB/equipo.png" alt="Equipo celebrando con un trofeo" className="img-fluid rounded shadow-lg" />
+                    <img src="/img/BANNER_WEB/equipo.png" alt="Equipo celebrando con un trofeo" className="img-fluid rounded shadow-lg" />
                 </Col>
             </Row>
         </Container>
