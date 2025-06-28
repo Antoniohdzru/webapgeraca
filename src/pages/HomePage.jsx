@@ -143,7 +143,7 @@ function HomePage() {
                 <Card.Body className="d-flex flex-column">
                   <Card.Title>{news.title}</Card.Title>
                   <Button 
-                        href={news.externalLink} 
+                        href={todasLasNoticias.externalLink} 
                         target="_blank" 
                         rel="noopener noreferrer" 
                         variant="outline-primary" 
