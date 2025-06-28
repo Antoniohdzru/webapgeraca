@@ -1,7 +1,6 @@
-// src/pages/NoticiasPage.jsx (CON BOTONES CORREGIDOS)
+// src/pages/NoticiasPage.jsx 
 import React from 'react';
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
-// Ya no necesitamos 'Link' de react-router-dom para esta página
 import { todasLasNoticias } from '../data/noticiasData.js'; 
 
 // Separamos la noticia destacada del resto
@@ -33,9 +32,9 @@ function NoticiasPage() {
 
                 {/* --- BOTÓN CORREGIDO --- */}
                 <Button 
-                  href={todasLasNoticias.externalLink} // Usamos href con el enlace externo
-                  target="_blank"                 // Abre en una nueva pestaña
-                  rel="noopener noreferrer"       // Medida de seguridad
+                  href={todasLasNoticias.externalLink} 
+                  target="_blank"               
+                  rel="noopener noreferrer"      
                   variant="primary" 
                   className="card-button mt-auto align-self-start"
                 >

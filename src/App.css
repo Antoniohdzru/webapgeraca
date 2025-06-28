@@ -16,6 +16,11 @@
   --font-heading: 'Teko', sans-serif;
   --font-body: 'Roboto', sans-serif;
 }
+.dropdown-item {
+  font-family: var(--font-heading) !important;
+  font-size: 1.3rem !important; 
+  letter-spacing: 1px !important;
+}
 
 body {
   background-color: #000000;
@@ -998,14 +1003,15 @@ p,
 @media (max-width: 991.98px) {
   /* Mueve la línea al lado izquierdo */
   .timeline::after {
-    left: 31px;
+    left: 20px; 
   }
 
   /* Todos los items ocupan el ancho completo */
   .timeline-item {
     width: 100%;
-    padding-left: 70px;
-    padding-right: 25px;
+    padding-left: 55px; 
+    padding-right: 15px;
+    margin-bottom: 50px; 
   }
   .timeline-item-right {
     left: 0%;
@@ -1014,14 +1020,153 @@ p,
   /* Coloca los puntos en la nueva posición de la línea */
   .timeline-item-left .timeline-dot, 
   .timeline-item-right .timeline-dot {
-    left: 24px;
+    left: 13px; 
   }
   
-  /* Coloca las fechas en la misma línea que los puntos */
+  /* Coloca las fechas alineadas con el punto, no encima de la tarjeta */
   .timeline-item-left .timeline-date,
   .timeline-item-right .timeline-date {
-      left: 70px; /* Alineado con el padding del contenido */
-      top: -20px; /* Encima de la tarjeta */
-      font-size: 1rem;
+    left: 55px;
+    top: 25px; 
+    transform: translateY(-50%); 
+    margin: 0;
+    font-size: 1rem;
+    color: var(--text-muted); 
   }
+
+  /* Empujamos la tarjeta hacia abajo para dejar espacio a la fecha */
+  .timeline-content {
+    margin-top: 30px; 
+  }
+}
+
+/* --- Estilos para las Tarjetas de Actividades --- */
+.activity-card {
+  /* Fondo con el mismo gradiente que la página de Historia */
+  background-image: linear-gradient(145deg, var(--dark-blue), var(--raca-pink));
+  border: 1px solid var(--raca-pink);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: var(--text-light); 
+}
+
+.activity-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(236, 72, 153, 0.3); 
+}
+
+/* Título dentro de la tarjeta de actividad */
+.activity-card-title {
+  color: var(--text-light) !important; 
+  font-size: 1.75rem;
+  font-weight: bold;
+}
+
+/* Texto del párrafo dentro de la tarjeta de actividad */
+.activity-card-text {
+  color: var(--text-light) !important; 
+  opacity: 0.9;
+}
+
+/* --- Estilos para las Tarjetas de Noticias (NoticiasPage y HomePage) --- */
+
+.news-card {
+  /* Fondo oscuro sólido, como las tarjetas de entrenadores */
+  background-color: var(--card-bg); 
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%; /* Asegura que todas las tarjetas en una fila tengan la misma altura */
+}
+
+.news-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(59, 130, 246, 0.2); /* Sombra azul al pasar el ratón */
+}
+
+.news-card .card-img-top {
+  height: 220px;
+  object-fit: cover;
+}
+
+.news-card .card-body {
+  padding: 1.5rem;
+}
+
+/* Título de la tarjeta de noticia -> AHORA EN AZUL */
+.news-card .card-title {
+  color: var(--accent-blue) !important; /* Forzamos el color azul */
+  font-size: 1.75rem;
+  line-height: 1.2;
+}
+
+/* Texto del párrafo de la noticia -> AHORA EN BLANCO */
+.news-card .card-text {
+  color: var(--text-light) !important; /* Forzamos el color blanco */
+}
+
+/* Estilos para el botón "Leer Más" */
+.card-button-outline {
+  color: var(--accent-blue);
+  border-color: var(--accent-blue);
+}
+
+.card-button-outline:hover {
+  color: #fff;
+  background-color: var(--accent-blue);
+  border-color: var(--accent-blue);
+}
+
+
+
+/* --- CORRECCIÓN DEFINITIVA PARA TARJETAS DE NOTICIAS --- */
+
+.news-card {
+  /* Fondo oscuro sólido, como las tarjetas de entrenadores */
+  background-color: var(--card-bg) !important; 
+  border: 1px solid var(--border-color) !important;
+  border-radius: 8px !important;
+  overflow: hidden !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+  height: 100% !important;
+}
+
+.news-card:hover {
+  transform: translateY(-10px) !important;
+  box-shadow: 0 10px 30px rgba(59, 130, 246, 0.2) !important;
+}
+
+.news-card .card-img-top {
+  height: 220px !important;
+  object-fit: cover !important;
+}
+
+.news-card .card-body {
+  padding: 1.5rem !important;
+}
+
+/* Título de la tarjeta de noticia -> AHORA EN AZUL */
+.news-card .card-title {
+  color: var(--accent-blue) !important; /* Forzamos el color azul */
+  font-size: 1.75rem !important;
+  line-height: 1.2 !important;
+}
+
+/* Texto del párrafo de la noticia -> AHORA EN BLANCO */
+.news-card .card-text {
+  color: var(--text-light) !important; /* Forzamos el color blanco */
+}
+
+/* Estilos para el botón "Leer Más" */
+.card-button-outline {
+  color: var(--accent-blue) !important;
+  border-color: var(--accent-blue) !important;
+}
+
+.card-button-outline:hover {
+  color: #fff !important;
+  background-color: var(--accent-blue) !important;
+  border-color: var(--accent-blue) !important;
 }
