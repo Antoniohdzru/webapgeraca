@@ -2,19 +2,26 @@
 
 export const todasLasNoticias = [
   { 
-    id: 'pretemporada-25-26',
-    img: 'https://granadapolideportiva.es/wp-content/uploads/2018/08/082718-PRETEMPORADA-PISTA.jpg',
-    title: 'El CD Tear Ramón y Cajal recibirá el Diploma al Mérito por la Ciudad',
-    text: 'El pasado viernes 21 de diciembre fue concedido, por el Pleno de la Corporación, el Diploma al Mérito por la Ciudad al Club femenino de Baloncesto Ramón y Cajal (RACA).',
+    id: 'tornero-internacional',
+    img: '/img/BANNER_WEB/torneo_internacional.jpg',
+    title: 'Torneo Internacional, visita de las Soldiers de Canadá',
+    text: 'El fin de semana del 14 al 16 de marzo se celebrará en el pabellón del CES Ramón y Cajal el torneo internacional que reunirá a los equipos cadetes de Soldiers de Canadá, Fundacion Granada y Raca con dos apasionantes partidos. El sábado a mediodía, además, se celebrará una comida de confraternidad entre ambos partidos.La actividad está patrocinada por el Centro de Estudios Técnico-Artísticos TEAR a través del programa Red de Ganadores de la Junta de Andalucía',
     featured: true,
-    externalLink: 'https://granadapolideportiva.es/el-cd-tear-ramon-y-cajal-recibira-el-diploma-al-merito-por-la-ciudad/' // <-- AÑADE AQUÍ EL ENLACE A LA NOTICIA REAL
+    externalLink: '*' // <-- AÑADE AQUÍ EL ENLACE A LA NOTICIA REAL
   },
   { 
-    id: 'exito-3x3',
-    img: '/news-1.jpg', // Asegúrate de tener estas imágenes en public/
-    title: 'Éxito del 3x3 Nocturno', 
-    text: 'Más de 500 participantes disfrutaron de una noche de baloncesto y diversión para cerrar la temporada.',
-    externalLink: '#'
+    id: 'campus-individual',
+    img: '/img/BANNER_WEB/.jpg',
+    title: 'Campus de tecnificación individual',
+    text: 'Del 10 al 12 de junio próximo, en horario de 18:00-21:00, tendrá lugar en el pabellón nuestro ya tradicional campus de tecnificación, centrado fundamentalmente en el entrenamiento individual del tiro y el pase. Inscripciones abiertas hasta el 8 de junio mediante comunicación al coordinador.La actividad está patrocinada por el Centro de Estudios Técnico-Artísticos TEAR a través del programa Red de Ganadores de la Junta de Andalucía',
+    externalLink: '*' 
+  },
+  { 
+    id: 'pretemporada-25-26',
+    img: 'https://granadapolideportiva.es/wp-content/uploads/2018/08/082718-PRETEMPORADA-PISTA.jpg', // Asegúrate de tener estas imágenes en public/
+    title: 'El CD Tear Ramón y Cajal recibirá el Diploma al Mérito por la Ciudad', 
+    text: 'El pasado viernes 21 de diciembre fue concedido, por el Pleno de la Corporación, el Diploma al Mérito por la Ciudad al Club femenino de Baloncesto Ramón y Cajal (RACA).',
+    externalLink: 'https://granadapolideportiva.es/el-cd-tear-ramon-y-cajal-recibira-el-diploma-al-merito-por-la-ciudad/'
   },
   { 
     id: 'nuevas-alianzas',
