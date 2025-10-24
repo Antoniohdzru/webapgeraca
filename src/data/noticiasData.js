@@ -3,7 +3,7 @@
 export const todasLasNoticias = [
   { 
     id: 'tornero-internacional',
-    img: '/img/BANNER_WEB/torneo_internacional.jpg',
+    img: 'public/img/BANNER_WEB/torneo_internacioal.jpeg',
     title: 'Torneo Internacional, visita de las Soldiers de Canadá',
     text: 'El fin de semana del 14 al 16 de marzo se celebrará en el pabellón del CES Ramón y Cajal el torneo internacional que reunirá a los equipos cadetes de Soldiers de Canadá, Fundacion Granada y Raca con dos apasionantes partidos. El sábado a mediodía, además, se celebrará una comida de confraternidad entre ambos partidos.La actividad está patrocinada por el Centro de Estudios Técnico-Artísticos TEAR a través del programa Red de Ganadores de la Junta de Andalucía',
     featured: true,
