@@ -3,7 +3,7 @@
 export const todasLasNoticias = [
   { 
     id: 'tornero-internacional',
-    img: 'public/img/BANNER_WEB/torneo_internacioal.jpeg',
+    img: '/img/BANNER_WEB/torneo_internacioal.jpeg',
     title: 'Torneo Internacional, visita de las Soldiers de Canadá',
     text: 'El fin de semana del 14 al 16 de marzo se celebrará en el pabellón del CES Ramón y Cajal el torneo internacional que reunirá a los equipos cadetes de Soldiers de Canadá, Fundacion Granada y Raca con dos apasionantes partidos. El sábado a mediodía, además, se celebrará una comida de confraternidad entre ambos partidos.La actividad está patrocinada por el Centro de Estudios Técnico-Artísticos TEAR a través del programa Red de Ganadores de la Junta de Andalucía',
     featured: true,
@@ -11,7 +11,7 @@ export const todasLasNoticias = [
   },
   { 
     id: 'campus-individual',
-    img: 'public/img/BANNER_WEB/Campus Individual.jpeg',
+    img: '/img/BANNER_WEB/Campus Individual.jpeg',
     title: 'Campus de tecnificación individual',
     text: 'Del 10 al 12 de junio próximo, en horario de 18:00-21:00, tendrá lugar en el pabellón nuestro ya tradicional campus de tecnificación, centrado fundamentalmente en el entrenamiento individual del tiro y el pase. Inscripciones abiertas hasta el 8 de junio mediante comunicación al coordinador.La actividad está patrocinada por el Centro de Estudios Técnico-Artísticos TEAR a través del programa Red de Ganadores de la Junta de Andalucía',
     externalLink: '*' 
