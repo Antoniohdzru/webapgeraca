@@ -11,7 +11,7 @@ export const todasLasNoticias = [
   },
   { 
     id: 'campus-individual',
-    img: '/img/BANNER_WEB/Campus Individual.jpeg',
+    img: '/img/BANNER_WEB/campus-individual.jpeg',
     title: 'Campus de tecnificación individual',
     text: 'Del 10 al 12 de junio próximo, en horario de 18:00-21:00, tendrá lugar en el pabellón nuestro ya tradicional campus de tecnificación, centrado fundamentalmente en el entrenamiento individual del tiro y el pase. Inscripciones abiertas hasta el 8 de junio mediante comunicación al coordinador.La actividad está patrocinada por el Centro de Estudios Técnico-Artísticos TEAR a través del programa Red de Ganadores de la Junta de Andalucía',
     externalLink: '*' 
