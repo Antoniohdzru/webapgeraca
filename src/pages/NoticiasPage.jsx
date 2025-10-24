@@ -31,7 +31,7 @@ function NoticiasPage() {
         <div className="page-hero-overlay"></div>
         <Container>
           <h1 className="page-hero-title">Noticias</h1>
-          <p className="page-hero-subtitle">Toda la actualidad del CD Tear Ramón y Cajal.</p>
+nbsp;       <p className="page-hero-subtitle">Toda la actualidad del CD Tear Ramón y Cajal.</p>
         </Container>
       </div>
 
@@ -42,12 +42,11 @@ function NoticiasPage() {
         <Card className="news-card featured-news-main mb-5">
           <Row className="g-0">
             <Col lg={7}>
-              {/* --- IMAGEN CON ALTURA FIJA --- */}
+              {/* --- IMAGEN COMO ESTABA ORIGINALMENTE --- */}
               <img 
                 src={featuredNews1.img} 
-                className="w-100 featured-news-img" // Reemplazamos 'img-fluid' por 'w-100'
+                className="img-fluid featured-news-img" // <-- Restaurado
                 alt={featuredNews1.title} 
-                style={{ height: '400px', objectFit: 'cover' }} // <-- ESTILO AÑADIDO
               />
             </Col>
             <Col lg={5} className="d-flex flex-column">
@@ -67,12 +66,11 @@ function NoticiasPage() {
           <Card className="news-card featured-news-main mb-5">
               <Row className="g-0">
                 <Col lg={7}>
-                  {/* --- IMAGEN CON ALTURA FIJA --- */}
+                  {/* --- IMAGEN COMO ESTABA ORIGINALMENTE --- */}
                   <img 
                     src={featuredNews2.img} 
-                    className="w-100 featured-news-img" // Reemplazamos 'img-fluid' por 'w-100'
+                    className="img-fluid featured-news-img" // <-- Restaurado
                     alt={featuredNews2.title} 
-                    style={{ height: '400px', objectFit: 'cover' }} // <-- ESTILO AÑADIDO
                   />
                 </Col>
                 <Col lg={5} className="d-flex flex-column">
@@ -97,7 +95,7 @@ function NoticiasPage() {
               <Card className="news-card h-100">
                 <Card.Img variant="top" src={news.img} />
                 <Card.Body className="d-flex flex-column">
-                  <Card.Title>{news.title}</Card.Title>
+A               <Card.Title>{news.title}</Card.Title>
                   <Card.Text>{news.text}</Card.Text>
                   
                   <Button 
@@ -108,7 +106,7 @@ function NoticiasPage() {
                     className="card-button-outline mt-auto align-self-start"
                   >
                     Leer Más
-        _         </Button>
+                  </Button>
 
                 </Card.Body>
               </Card>
